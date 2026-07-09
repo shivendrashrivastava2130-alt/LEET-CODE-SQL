@@ -1,4 +1,4 @@
-select round(count(distinct a2.player_id)/count(distinct a1.player_id),2) as fraction 
+select round(count(distinct a2.player_id)/count(*),2) as fraction 
 from 
 (select player_id,min(event_date) as first_login 
 from Activity 
